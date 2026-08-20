@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Capítulo 2 — O começo do para sempre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="assets/audio/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="voiceAudio" preload="auto"></audio>
+
+  <main id="app">
+    <!-- CENA 1 -->
+    <section class="scene active" data-scene="0">
+      <div class="scene-content center">
+        <p class="eyebrow">CAPÍTULO 2</p>
+        <h1>Há 2 meses,<br>você disse sim.</h1>
+        <p class="subtitle">
+          Mas essa não é uma história sobre os últimos dois meses.
+          <br>É sobre tudo que vem depois deles.
+        </p>
+
+        <button class="primary-btn" id="startBtn">Começar</button>
+        <p class="headphones">Use fones de ouvido 🎧</p>
+      </div>
+    </section>
+
+    <!-- CENA 2 -->
+    <section class="scene" data-scene="1">
+      <div class="scene-content narrow">
+        <p class="eyebrow">ANTES DE VOCÊ</p>
+        <h2>Eu tinha planos.</h2>
+        <p class="story-text">
+          Planos para a vida, para o futuro, para quem eu queria ser.
+          Mas eu ainda não sabia que alguns dos meus melhores planos
+          começariam depois de conhecer você.
+        </p>
+        <button class="text-btn next-btn">Continuar →</button>
+      </div>
+    </section>
+
+    <!-- CENA 3 -->
+    <section class="scene photo-scene" data-scene="2">
+      <div class="photo-bg" style="background-image: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)), url('assets/images/nos-1.jpg');"></div>
+      <div class="scene-content narrow">
+        <p class="eyebrow">ATÉ QUE APARECEU VOCÊ</p>
+        <h2>E algumas coisas mudaram.</h2>
+        <p class="story-text">
+          O futuro deixou de ser apenas um lugar para onde eu estava indo.
+          Ele passou a ter você nele.
+        </p>
+        <button class="text-btn next-btn">Continuar →</button>
+      </div>
+    </section>
+
+    <!-- CENA 4 -->
+    <section class="scene" data-scene="3">
+      <div class="scene-content center">
+        <p class="eyebrow">TEM UMA COISA</p>
+        <h2>Algumas coisas eu nunca consegui escrever direito.</h2>
+        <p class="subtitle">Então achei melhor você ouvir de mim.</p>
+        <button class="primary-btn" id="playVoice1">Ouvir minha voz</button>
+
+        <div class="audio-status hidden" id="audioStatus1">
+          <div class="pulse"></div>
+          <span>Ouvindo...</span>
+        </div>
+
+        <button class="text-btn hidden" id="afterVoice1">Continuar →</button>
+      </div>
+    </section>
+
+    <!-- CENA 5 -->
+    <section class="scene" data-scene="4">
+      <div class="scene-content center">
+        <p class="eyebrow">AGORA</p>
+        <h2>Quer ver uma coisa<br>que ainda não aconteceu?</h2>
+        <button class="primary-btn next-btn">Sim</button>
+      </div>
+    </section>
+
+    <!-- CENA 6 -->
+    <section class="scene memory-scene" data-scene="5">
+      <div class="photo-bg" style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.75)), url('assets/images/futuro-casa.jpg');"></div>
+      <div class="scene-content bottom">
+        <p class="year">2027</p>
+        <h2>Nosso primeiro domingo<br>na nossa casa.</h2>
+        <p class="subtitle">
+          Café ficando frio porque a conversa estava boa demais.
+        </p>
+        <button class="text-btn next-btn">Próxima memória →</button>
+      </div>
+    </section>
+
+    <!-- CENA 7 -->
+    <section class="scene memory-scene" data-scene="6">
+      <div class="photo-bg" style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.75)), url('assets/images/futuro-viagem.jpg');"></div>
+      <div class="scene-content bottom">
+        <p class="year">2028</p>
+        <h2>Nossa primeira viagem<br>depois de casados.</h2>
+        <p class="subtitle">
+          O destino importa menos do que saber que você está do meu lado.
+        </p>
+        <button class="text-btn next-btn">Próxima memória →</button>
+      </div>
+    </section>
+
+    <!-- CENA 8 -->
+    <section class="scene memory-scene" data-scene="7">
+      <div class="photo-bg" style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.75)), url('assets/images/futuro-casa2.jpg');"></div>
+      <div class="scene-content bottom">
+        <p class="year">2035</p>
+        <h2>Uma casa cheia<br>de histórias nossas.</h2>
+        <p class="subtitle">
+          Algumas importantes. Outras completamente bobas.
+          E eu vou amar todas elas.
+        </p>
+        <button class="text-btn next-btn">Próxima memória →</button>
+      </div>
+    </section>
+
+    <!-- CENA 9 -->
+    <section class="scene memory-scene" data-scene="8">
+      <div class="photo-bg" style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.78)), url('assets/images/futuro-velhinhos.jpg');"></div>
+      <div class="scene-content bottom">
+        <p class="year">2076</p>
+        <h2>50 anos depois.</h2>
+        <p class="subtitle">
+          E eu ainda escolheria você.
+        </p>
+        <button class="text-btn next-btn">Continuar →</button>
+      </div>
+    </section>
+
+    <!-- CENA 10 -->
+    <section class="scene" data-scene="9">
+      <div class="scene-content center">
+        <p class="eyebrow">MAS TEM UM DETALHE</p>
+        <h2>Essas lembranças<br>ainda não existem.</h2>
+        <button class="text-btn next-btn">...</button>
+      </div>
+    </section>
+
+    <!-- CENA 11 -->
+    <section class="scene" data-scene="10">
+      <div class="scene-content center">
+        <h2>Então vamos ter que<br>viver cada uma delas.</h2>
+        <p class="subtitle">
+          Uma viagem. Um domingo. Uma casa. Uma vida.
+          <br>Você e eu.
+        </p>
+        <button class="primary-btn" id="playVoice2">Tem mais uma coisa</button>
+
+        <div class="audio-status hidden" id="audioStatus2">
+          <div class="pulse"></div>
+          <span>Ouvindo...</span>
+        </div>
+
+        <button class="text-btn hidden" id="afterVoice2">Continuar →</button>
+      </div>
+    </section>
+
+    <!-- CENA 12 -->
+    <section class="scene" data-scene="11">
+      <div class="scene-content center">
+        <p class="eyebrow">ANTES DE IR</p>
+        <h2>Onde você gostaria que fosse<br>nossa próxima memória?</h2>
+
+        <div class="choice-grid">
+          <button class="choice-btn" data-choice="Uma viagem ✈️">Uma viagem ✈️</button>
+          <button class="choice-btn" data-choice="Um jantar juntos 🍷">Um jantar juntos 🍷</button>
+          <button class="choice-btn" data-choice="Um fim de semana só nosso ❤️">Um fim de semana só nosso ❤️</button>
+          <button class="choice-btn" data-choice="Surpresa 👀">Surpresa 👀</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENA 13 -->
+    <section class="scene" data-scene="12">
+      <div class="scene-content center">
+        <p class="eyebrow">ANOTADO</p>
+        <h2 id="choiceResult">Seu noivo cuidará do resto. ❤️</h2>
+        <p class="subtitle">
+          Feliz 2 meses de noivado, meu amor.
+        </p>
+
+        <div class="final-heart">♡</div>
+
+        <button class="text-btn" id="restartBtn">Ver novamente</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="music-control hidden" id="musicControl">
+    <button id="musicToggle" aria-label="Pausar ou tocar música">♪</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
